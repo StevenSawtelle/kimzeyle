@@ -29,5 +29,5 @@ export const cousins = [
     'Logan',
 ].sort();
 
-// export const getRandomCousin = () => cousins[16];
+// export const getRandomCousin = () => cousins[17];
 export const getRandomCousin = () => cousins[Math.floor(Math.random()*cousins.length)];

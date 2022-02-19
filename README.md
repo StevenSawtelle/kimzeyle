@@ -1,6 +1,6 @@
 # Kimzeyle
 
-Wordle-inspired game where you guess the location of a Kimzey cousin, made for my grandpa and grandmas anniversary celbration!
+Wordle-inspired game where you guess the location of a Kimzey cousin, made for my grandpa and grandmas 80th birthdays!
 
 ![example image](example.png "Example image")
 

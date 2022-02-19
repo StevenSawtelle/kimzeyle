@@ -66,7 +66,7 @@ const App = () => {
             return guesses.length <= i ? <EmptyResults key={i} /> : null
           })}
         </div>
-        <p className={'subtext'}>Love you Grandma and Grandpa!</p>
+        <p className={'subtext'}>Happy 80th bday Grandma and Grandpa!</p>
         <p className={'subtext'}>A website by <a href='https://www.stevensawtelle.com'>Steven Sawtelle</a></p>
       </header>
     </div>

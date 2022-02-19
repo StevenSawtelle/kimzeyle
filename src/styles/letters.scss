@@ -1,0 +1,80 @@
+.results{
+    display: table;
+    margin-bottom: 25px;
+    .result-text {
+        white-space: nowrap;
+        display: flex;
+
+        .wordle-letter {
+            display: inline-block;
+            height: min(64px, 6vw);
+            width: min(64px, 6vw);
+            color: #fff;
+            margin-right: 6px;
+            margin-top: 6px;
+        
+            .tile {
+                height: min(64px, 6vw);
+                width: min(64px, 6vw);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+                font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+            }
+
+            .incorrect {
+                background-color: #3a3a3c;
+            }
+
+            .one {
+                opacity: .9;
+            }
+
+            .two {
+                opacity: .8;
+            }
+
+            .three {
+                opacity: .7;
+            }
+
+            .four {
+                opacity: .6;
+            }
+
+            .five {
+                opacity: .5;
+            }
+
+            .six {
+                opacity: .4;
+            }
+
+            .seven {
+                opacity: .3;
+            }
+
+            .eight {
+                opacity: .2;
+            }
+
+            .nine {
+                opacity: .1;
+            }
+
+            .ten {
+                opacity: 0;
+            }
+
+            .correct { 
+                background-color: #538d4e;
+            }
+
+            .misplaced {
+                background-color: #c9b458;;
+            }
+        }
+    }
+}

@@ -3,6 +3,7 @@ import React from "react";
 import './styles/letters.scss';
 
 const getHitList = (guess, goal) => {
+    console.log(guess, goal)
     //first init array of incorrect guesses
     let hitList = Array.apply(null, Array(guess.length)).map(() => 'incorrect' )
     let usedLetters = {};
@@ -71,7 +72,7 @@ export const ResultText = ({guess, cousin }) => {
         {guess.split('').map((letter, i) => {
             return <WordleLetter key={i}
                 status={hitList[i]}
-                letter={letter.toUpperCase()}
+                letter={letter}
             />
         })}
     </div>

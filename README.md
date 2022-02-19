@@ -1,6 +1,6 @@
-# Kimzeydle
+# Kimzeyle
 
-Wordle-inspired game where you guess the location of a US poltician, made for my girlfriend (who works for a senator and wants to learn more) for Valentine's day 2022. 
+Wordle-inspired game where you guess the location of a Kimzey cousing, made for my grandpa and grandmas anniversary celbration!
 
 ![example image](example.png "Example image")
 

@@ -24,6 +24,10 @@
   color: white;
 }
 
+.mainText {
+  margin-bottom: 8px;
+}
+
 .kimzeyle {
   font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
   font-weight: bold;
@@ -34,6 +38,12 @@
 .subtext {
   font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
+}
+
+.score {
+  font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  margin-bottom: 4px;
 }
 
 .App-link {

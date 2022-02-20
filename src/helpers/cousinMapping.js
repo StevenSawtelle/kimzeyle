@@ -18,7 +18,7 @@ export const cousins = [
     'Joseph',
     'Garrett',
     'Madisen',
-    'Gabe',
+    'Gabriel',
     'Alecia',
     'Carli',
     'Benjamin',

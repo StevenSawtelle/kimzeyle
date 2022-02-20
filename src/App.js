@@ -14,17 +14,34 @@ const App = () => {
   const [mainText, setMainText] = useState("Guess the Kimzey cousin, wordle style!");
   const [gameOver, setGameOver] = useState(false);
   const [guesses, setGuesses] = useState([]);
+  const [attempted, setAttempted] = useState(0);
+  const [correct, setCorrect] = useState(0);
+  const [avgGuesses, setAvgGuesses] = useState(0);
+  const [pastGuesses, setPastGuesses] = useState([]);
 
-  const onGuess = guess => () => {
+  const onGuess = guess => {
+    const oldGuesses = guesses;
+    const newGuesses = oldGuesses.concat(guess)
     setMainText("Guess the Kimzey cousin, wordle style!");
     if(cousins.map(cousin => cousin.toUpperCase()).includes(guess.toUpperCase())){
-      setGuesses(guesses.concat(guess))
+      setGuesses(newGuesses)
       if(guess.toUpperCase() === cousin.toUpperCase()){
         setMainText(`Correct! It is ${cousin}.`);
+        // this code is ugly but its purpose is to not need to process state. could be a lot cleaner
+        const oldCorrect = correct;
+        const newCorrect = oldCorrect + 1;
+        setAttempted(attempted + 1);
+        setCorrect(correct + 1);
+        const oldPastGuesses = pastGuesses;
+        const newPastGuesses = [...oldPastGuesses, newGuesses];
+        setPastGuesses(newPastGuesses);
+        const sum = newPastGuesses.reduce((prev, cur) => prev + cur.length, 0);
+        setAvgGuesses(parseFloat((sum / newCorrect).toFixed(2)));
         setGameOver(true);
       }
       else if(guesses.length >= 5){
         setMainText(`Game over. It is ${cousin}!`);
+        setAttempted(attempted + 1);
         setGameOver(true);
       }
     } else {
@@ -50,9 +67,12 @@ const App = () => {
       <header className="App-header">
         <h1 className={'kimzeyle'}>Kimzeyle</h1>
         {/* <ImageContainer politician={politician} /> */}
-        <p>
+        <p className={'mainText'}>
           {mainText}
         </p>
+        <p className={'score'}>Attempted: {attempted}</p>
+        <p className={'score'}>Correct: {correct}</p>
+        <p className={'score'}>Average Guesses: {avgGuesses}</p>
         {!gameOver && <CousinSelection onGuess={onGuess} />}
         {gameOver && 
           <button onClick={playAgain}>
